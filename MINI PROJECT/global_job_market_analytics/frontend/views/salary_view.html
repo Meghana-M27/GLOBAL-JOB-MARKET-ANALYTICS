@@ -1,0 +1,75 @@
+<!--
+  frontend/views/salary_view.html
+  Salary Analysis Tab — Section 01
+  Reference HTML snippet for the Salary tab content.
+  In production this would be rendered by a templating engine.
+-->
+
+<!-- TAB 01: SALARY ANALYSIS -->
+<section id="tab-salary" class="tab-pane active">
+
+  <div class="sh">
+    <span class="sh-num">01</span>
+    <h2>Average Annual Salary Analysis</h2>
+  </div>
+
+  <!-- Row 1: Country + Role charts -->
+  <div class="grid-2">
+    <div class="card">
+      <div class="chart-header">
+        <div class="chart-header-left">
+          <div class="title">Country-wise Salary</div>
+          <div class="sub">Avg annual salary (USD) by country for selected filters</div>
+        </div>
+        <button class="btn-icon" onclick="downloadChart('ch-csal','country_salary.png')" title="Download">⬇</button>
+      </div>
+      <div class="chart-wrapper chart-md"><canvas id="ch-csal"></canvas></div>
+    </div>
+
+    <div class="card">
+      <div class="chart-header">
+        <div class="chart-header-left">
+          <div class="title">Role-wise Salary Distribution</div>
+          <div class="sub">Avg annual salary (USD) across all 15 job roles</div>
+        </div>
+        <button class="btn-icon" onclick="downloadChart('ch-rsal','role_salary.png')" title="Download">⬇</button>
+      </div>
+      <div class="chart-wrapper chart-md"><canvas id="ch-rsal"></canvas></div>
+    </div>
+  </div>
+
+  <!-- Row 2: Min/Max range -->
+  <div class="card mb15">
+    <div class="chart-header">
+      <div class="chart-header-left">
+        <div class="title">Salary Range by Country (Min – Max Band)</div>
+        <div class="sub">Compensation spread showing full salary band per country</div>
+      </div>
+    </div>
+    <div class="chart-wrapper chart-sm"><canvas id="ch-range"></canvas></div>
+  </div>
+
+  <!-- Summary Table -->
+  <div class="card mb15">
+    <div class="card-title">📋 Salary Summary Table</div>
+    <div class="card-sub">Ranked by average annual compensation (USD)</div>
+    <div class="tw">
+      <table class="data-table">
+        <thead>
+          <tr>
+            <th>#</th>
+            <th>Country</th>
+            <th>Work Mode</th>
+            <th>Avg Salary (USD)</th>
+            <th>Min Salary</th>
+            <th>Max Salary</th>
+          </tr>
+        </thead>
+        <tbody id="sal-tb">
+          <!-- Populated dynamically by renderSalaryTab() in JS -->
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+</section>

@@ -1,0 +1,135 @@
+<!--
+  frontend/views/ml_view.html
+  ML Predictions Tab — Section 06
+-->
+
+<section id="tab-ml" class="tab-pane">
+
+  <div class="sh">
+    <span class="sh-num">06</span>
+    <h2>ML Predictions &amp; Analytics</h2>
+  </div>
+
+  <div class="grid-2">
+
+    <!-- Salary Predictor -->
+    <div class="card">
+      <div class="card-title">🔮 Salary Predictor (Linear Regression)</div>
+      <div class="card-sub">Predict future salary using historical trend data with R² confidence score</div>
+
+      <div class="form-group">
+        <label class="form-label">Country</label>
+        <select class="form-select" id="p-c">
+          <option value="US">United States</option><option value="IN">India</option>
+          <option value="GB">United Kingdom</option><option value="CA">Canada</option>
+          <option value="DE">Germany</option><option value="AU">Australia</option>
+          <option value="SG">Singapore</option><option value="JP">Japan</option>
+          <option value="NL">Netherlands</option><option value="AE">United Arab Emirates</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label class="form-label">Job Role</label>
+        <select class="form-select" id="p-r">
+          <option value="1">Software Engineer</option><option value="2">Data Analyst</option>
+          <option value="3">Data Scientist</option><option value="4">Machine Learning Engineer</option>
+          <option value="5">AI Engineer</option><option value="6">Web Developer</option>
+          <option value="7">Full Stack Developer</option><option value="8">Cloud Engineer</option>
+          <option value="9">DevOps Engineer</option><option value="10">Cyber Security Analyst</option>
+          <option value="11">Business Analyst</option><option value="12">UI/UX Designer</option>
+          <option value="13">Product Manager</option><option value="14">Database Administrator</option>
+          <option value="15">Network Engineer</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label class="form-label">Work Mode</label>
+        <select class="form-select" id="p-m">
+          <option value="Hybrid">Hybrid</option>
+          <option value="Onsite">Onsite</option>
+          <option value="Remote">Remote</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label class="form-label">Predict for Year: <span id="yr-lbl">2026</span></label>
+        <input type="range" min="2026" max="2030" value="2026" id="p-yr"
+          oninput="document.getElementById('yr-lbl').textContent=this.value"
+          class="range-input">
+      </div>
+
+      <button class="btn btn-primary" onclick="runPredict()" style="width:100%">Predict Salary</button>
+      <div id="pred-result" class="result-box"></div>
+    </div>
+
+    <!-- Demand Forecaster -->
+    <div class="card">
+      <div class="card-title">📈 Demand Forecasting (Moving Average)</div>
+      <div class="card-sub">Forecast job demand using 3-year moving average trend model</div>
+
+      <div class="form-group">
+        <label class="form-label">Country</label>
+        <select class="form-select" id="f-c">
+          <option value="US">United States</option><option value="IN">India</option>
+          <option value="GB">United Kingdom</option><option value="CA">Canada</option>
+          <option value="DE">Germany</option><option value="AU">Australia</option>
+          <option value="SG">Singapore</option><option value="JP">Japan</option>
+          <option value="NL">Netherlands</option><option value="AE">United Arab Emirates</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label class="form-label">Job Role</label>
+        <select class="form-select" id="f-r">
+          <option value="1">Software Engineer</option><option value="5">AI Engineer</option>
+          <option value="3">Data Scientist</option><option value="4">Machine Learning Engineer</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label class="form-label">Forecast Horizon: <span id="hz-lbl">3</span> years</label>
+        <input type="range" min="1" max="5" value="3" id="f-hz"
+          oninput="document.getElementById('hz-lbl').textContent=this.value"
+          class="range-input">
+      </div>
+
+      <button class="btn btn-secondary" onclick="runForecast()" style="width:100%">Forecast Demand</button>
+      <div id="fore-result" class="result-box"></div>
+    </div>
+
+  </div>
+
+  <!-- PPP Chart -->
+  <div class="card mb15">
+    <div class="card-title">💰 Cost-of-Living Adjusted Salary (PPP)</div>
+    <div class="card-sub">Purchasing power parity — which country actually pays more after adjusting for living costs?</div>
+    <div class="chart-wrapper chart-md"><canvas id="ch-ppp"></canvas></div>
+  </div>
+
+  <!-- Benchmark Table -->
+  <div class="card mb15">
+    <div class="card-title">🏆 Global Salary Benchmark</div>
+    <div class="card-sub">Statistical ranking of all countries for selected role and work mode</div>
+    <div class="tw">
+      <table class="data-table">
+        <thead>
+          <tr><th>#</th><th>Country</th><th>Region</th><th>Avg Salary</th><th>vs Global Avg</th></tr>
+        </thead>
+        <tbody id="bench-tb"><!-- populated by JS --></tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- Skill Gap -->
+  <div class="card mb15">
+    <div class="card-title">🔍 Skill Gap Analyser</div>
+    <div class="card-sub">Enter your current skills to assess readiness for the selected role</div>
+    <div class="skill-gap-input-row">
+      <input id="skill-input" type="text" class="form-input"
+        placeholder="e.g. Python, SQL, Communication, Cloud Platforms">
+      <button class="btn btn-secondary" onclick="checkGap()">Check Gap</button>
+    </div>
+    <div id="gap-result" class="result-box"></div>
+  </div>
+
+</section>

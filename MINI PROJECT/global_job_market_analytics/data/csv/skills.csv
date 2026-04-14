@@ -1,0 +1,112 @@
+id,role_id,skill_name,skill_type,percentage
+1,1,Python,Technical,22
+2,1,Java/C++,Technical,18
+3,1,SQL,Technical,12
+4,1,Git/CI-CD,Technical,10
+5,1,Cloud Platforms,Technical,8
+6,1,Problem-Solving,Soft,10
+7,1,Communication,Soft,8
+8,1,Team Collaboration,Soft,7
+9,1,Critical Thinking,Soft,5
+10,2,SQL,Technical,25
+11,2,Python,Technical,20
+12,2,Data Viz Tools,Technical,15
+13,2,Excel,Technical,10
+14,2,Communication,Soft,12
+15,2,Critical Thinking,Soft,10
+16,2,Problem-Solving,Soft,8
+17,3,Python (Scikit/TF),Technical,28
+18,3,SQL,Technical,18
+19,3,ML Algorithms,Technical,15
+20,3,Cloud Platforms,Technical,8
+21,3,Critical Thinking,Soft,10
+22,3,Communication,Soft,8
+23,3,Problem-Solving,Soft,8
+24,3,Team Collaboration,Soft,5
+25,4,Python (PyTorch/TF),Technical,30
+26,4,MLOps/DevOps,Technical,18
+27,4,Cloud Platforms,Technical,14
+28,4,SQL,Technical,8
+29,4,Problem-Solving,Soft,10
+30,4,Critical Thinking,Soft,8
+31,4,Team Collaboration,Soft,7
+32,4,Adaptability,Soft,5
+33,5,Python (LLMs/TF),Technical,32
+34,5,Cloud Platforms,Technical,18
+35,5,MLOps/DevOps,Technical,12
+36,5,SQL,Technical,7
+37,5,Problem-Solving,Soft,12
+38,5,Adaptability,Soft,8
+39,5,Communication,Soft,6
+40,5,Leadership,Soft,5
+41,6,JavaScript,Technical,25
+42,6,HTML/CSS,Technical,20
+43,6,Node.js,Technical,15
+44,6,SQL,Technical,10
+45,6,Communication,Soft,12
+46,6,Problem-Solving,Soft,10
+47,6,Adaptability,Soft,8
+48,7,JavaScript/Node.js,Technical,22
+49,7,Python/Backend,Technical,18
+50,7,SQL,Technical,15
+51,7,Cloud/DevOps,Technical,12
+52,7,HTML/CSS,Technical,8
+53,7,Problem-Solving,Soft,10
+54,7,Communication,Soft,8
+55,7,Team Collaboration,Soft,7
+56,8,AWS/Azure/GCP,Technical,30
+57,8,DevOps Tools,Technical,20
+58,8,Python/Scripting,Technical,15
+59,8,Networking,Technical,10
+60,8,Problem-Solving,Soft,10
+61,8,Adaptability,Soft,8
+62,8,Communication,Soft,7
+63,9,DevOps Tools,Technical,28
+64,9,Cloud Platforms,Technical,22
+65,9,Python/Shell,Technical,15
+66,9,SQL/Databases,Technical,8
+67,9,Problem-Solving,Soft,12
+68,9,Team Collaboration,Soft,8
+69,9,Communication,Soft,7
+70,10,Security Tools,Technical,25
+71,10,Networking,Technical,20
+72,10,Python/Scripting,Technical,15
+73,10,SQL,Technical,8
+74,10,Critical Thinking,Soft,14
+75,10,Problem-Solving,Soft,10
+76,10,Communication,Soft,8
+77,11,SQL,Technical,20
+78,11,Data Viz Tools,Technical,18
+79,11,Excel,Technical,12
+80,11,Python (basics),Technical,8
+81,11,Communication,Soft,18
+82,11,Critical Thinking,Soft,12
+83,11,Problem-Solving,Soft,12
+84,12,Design Tools,Technical,30
+85,12,HTML/CSS,Technical,18
+86,12,Prototyping,Technical,12
+87,12,User Research,Technical,8
+88,12,Creativity,Soft,14
+89,12,Communication,Soft,10
+90,12,Adaptability,Soft,8
+91,13,SQL/Analytics,Technical,18
+92,13,Data Viz Tools,Technical,12
+93,13,Roadmapping Tools,Technical,10
+94,13,Leadership,Soft,20
+95,13,Communication,Soft,18
+96,13,Critical Thinking,Soft,12
+97,13,Team Collaboration,Soft,10
+98,14,SQL,Technical,35
+99,14,Database Systems,Technical,25
+100,14,Python/Scripting,Technical,12
+101,14,Cloud Platforms,Technical,8
+102,14,Problem-Solving,Soft,10
+103,14,Communication,Soft,7
+104,14,Critical Thinking,Soft,3
+105,15,Networking Protocols,Technical,30
+106,15,Network Tools,Technical,22
+107,15,Python/Scripting,Technical,12
+108,15,Cloud Networking,Technical,10
+109,15,Problem-Solving,Soft,12
+110,15,Communication,Soft,8
+111,15,Team Collaboration,Soft,6

@@ -1,0 +1,16 @@
+id,title,category,experience_level,avg_years_exp
+1,Software Engineer,Engineering,Mid-Senior,5
+2,Data Analyst,Data & AI,Mid,3
+3,Data Scientist,Data & AI,Senior,5
+4,Machine Learning Engineer,Data & AI,Senior,6
+5,AI Engineer,Data & AI,Senior,7
+6,Web Developer,Engineering,Mid,3
+7,Full Stack Developer,Engineering,Mid-Senior,4
+8,Cloud Engineer,Infrastructure,Senior,5
+9,DevOps Engineer,Infrastructure,Senior,5
+10,Cyber Security Analyst,Security,Mid-Senior,4
+11,Business Analyst,Business,Mid,3
+12,UI/UX Designer,Design,Mid,3
+13,Product Manager,Management,Senior,6
+14,Database Administrator,Data & AI,Mid,3
+15,Network Engineer,Infrastructure,Mid,3

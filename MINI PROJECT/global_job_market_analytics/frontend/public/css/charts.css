@@ -1,0 +1,94 @@
+/* ============================================================
+   Chart-specific styles — wrappers, annotations, legends
+   ============================================================ */
+
+.chart-wrapper {
+  position: relative;
+  width: 100%;
+  background: transparent;
+}
+.chart-wrapper canvas { width: 100% !important; }
+
+/* Height presets */
+.chart-sm  { height: 220px; }
+.chart-md  { height: 300px; }
+.chart-lg  { height: 360px; }
+.chart-xl  { height: 420px; }
+
+/* ── CHART ANNOTATION LABELS ── */
+.chart-annotation {
+  position: absolute;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: .68rem; font-weight: 600;
+  padding: .2rem .5rem;
+  border-radius: 4px;
+  border: 1px solid;
+  pointer-events: none;
+  white-space: nowrap;
+}
+.chart-annotation.covid  { background: rgba(239,68,68,.12); color: #ef4444; border-color: rgba(239,68,68,.3); }
+.chart-annotation.ai     { background: rgba(16,185,129,.12); color: #10b981; border-color: rgba(16,185,129,.3); }
+.chart-annotation.peak   { background: rgba(245,158,11,.12); color: #f59e0b; border-color: rgba(245,158,11,.3); }
+
+/* ── CUSTOM LEGEND ── */
+.chart-legend {
+  display: flex; flex-wrap: wrap; gap: .8rem;
+  margin-top: .8rem; padding-top: .8rem;
+  border-top: 1px solid rgba(26,45,74,.5);
+}
+.legend-item {
+  display: flex; align-items: center; gap: .4rem;
+  font-size: .75rem; color: #5a7599;
+}
+.legend-dot  { width: 10px; height: 10px; border-radius: 50%; }
+.legend-line { width: 18px; height: 3px; border-radius: 2px; }
+.legend-bar  { width: 12px; height: 10px; border-radius: 2px; }
+
+/* ── TOOLTIP OVERRIDE ── */
+.chartjs-tooltip {
+  background: #0e1828 !important;
+  border: 1px solid #1a2d4a !important;
+  border-radius: 8px !important;
+  padding: .6rem .9rem !important;
+  font-family: 'DM Sans', sans-serif !important;
+  font-size: .8rem !important;
+  color: #dde8f8 !important;
+  box-shadow: 0 8px 24px rgba(0,0,0,.4) !important;
+  pointer-events: none;
+}
+
+/* ── CHART PLACEHOLDER (loading state) ── */
+.chart-placeholder {
+  display: flex; align-items: center; justify-content: center;
+  background: #0a1120; border: 1px dashed #1a2d4a;
+  border-radius: 10px; color: #5a7599; font-size: .82rem;
+}
+.chart-placeholder::before {
+  content: '📊 Loading chart...';
+  font-family: 'JetBrains Mono', monospace;
+}
+
+/* ── DONUT CENTRE LABEL ── */
+.donut-centre {
+  position: absolute; top: 50%; left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center; pointer-events: none;
+}
+.donut-centre .big { font-family: 'Syne', sans-serif; font-size: 1.4rem; font-weight: 800; color: #dde8f8; }
+.donut-centre .sub { font-size: .72rem; color: #5a7599; }
+
+/* ── AXIS LABELS ── */
+.axis-label {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: .68rem; color: #5a7599;
+  text-transform: uppercase; letter-spacing: .06em;
+}
+
+/* ── CHART SECTION HEADER ── */
+.chart-header {
+  display: flex; justify-content: space-between; align-items: flex-start;
+  margin-bottom: 1rem;
+}
+.chart-header-left .title { font-family: 'Syne', sans-serif; font-size: .92rem; font-weight: 700; color: #dde8f8; }
+.chart-header-left .sub   { font-size: .73rem; color: #5a7599; margin-top: .15rem; }
+.chart-header-right { font-family: 'JetBrains Mono', monospace; font-size: .7rem; color: #5a7599; }

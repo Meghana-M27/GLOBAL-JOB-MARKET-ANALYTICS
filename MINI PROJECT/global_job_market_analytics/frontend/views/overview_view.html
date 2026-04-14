@@ -1,0 +1,80 @@
+<!--
+  frontend/views/overview_view.html
+  Global Overview & Academic Insights Tab — Section 08
+-->
+
+<section id="tab-overview" class="tab-pane">
+
+  <div class="sh">
+    <span class="sh-num">08</span>
+    <h2>Global Overview &amp; Academic Insights</h2>
+  </div>
+
+  <!-- GDP vs Salary Bubble -->
+  <div class="card mb15">
+    <div class="card-title">GDP per Capita vs Avg Tech Salary (Bubble Chart)</div>
+    <div class="card-sub">Correlation between national wealth and technology compensation across 10 countries</div>
+    <div class="chart-wrapper" style="height:340px"><canvas id="ch-gdp"></canvas></div>
+  </div>
+
+  <div class="grid-2">
+    <div class="card">
+      <div class="card-title">Top Paying Roles (Funnel View)</div>
+      <div class="card-sub">Ranked compensation across all 15 roles for the selected work mode</div>
+      <div class="chart-wrapper chart-md"><canvas id="ch-funnel"></canvas></div>
+    </div>
+    <div class="card">
+      <div class="card-title">Avg Salary Share by Region</div>
+      <div class="card-sub">Regional compensation distribution — Hybrid baseline</div>
+      <div class="chart-wrapper chart-md"><canvas id="ch-region"></canvas></div>
+    </div>
+  </div>
+
+  <!-- Academic Insights -->
+  <div class="sh" style="margin-top:1.5rem">
+    <span class="sh-num">09</span>
+    <h2>Academic Insight Summary</h2>
+  </div>
+
+  <div class="igrid" id="insights-box">
+    <!-- 6 insight cards populated by JS renderOverviewTab() -->
+  </div>
+
+  <!-- Summary Metrics -->
+  <div class="card mb15">
+    <div class="card-title">📋 Final Summary Metrics</div>
+    <div class="card-sub">Structured academic summary for project presentation and viva</div>
+    <div class="sum-grid" id="sum-grid">
+      <!-- 6 metric boxes populated by JS -->
+    </div>
+  </div>
+
+  <!-- Data Sources Reference -->
+  <div class="card mb15">
+    <div class="card-title">📚 Data Sources &amp; Methodology</div>
+    <div class="card-sub">All data is realistically modelled from the following globally recognised labour market sources</div>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:1rem;margin-top:.5rem">
+      <div style="background:var(--s2);border-radius:8px;padding:1rem">
+        <div style="font-weight:700;font-size:.82rem;color:var(--cyan);margin-bottom:.4rem">🏦 World Bank</div>
+        <div style="font-size:.76rem;color:var(--muted)">Labor Statistics, GDP per capita, employment indices across 195 countries</div>
+      </div>
+      <div style="background:var(--s2);border-radius:8px;padding:1rem">
+        <div style="font-weight:700;font-size:.82rem;color:var(--violet);margin-bottom:.4rem">📊 OECD</div>
+        <div style="font-size:.76rem;color:var(--muted)">Employment Outlook, salary benchmarks, skills demand reports 2015–2025</div>
+      </div>
+      <div style="background:var(--s2);border-radius:8px;padding:1rem">
+        <div style="font-weight:700;font-size:.82rem;color:var(--orange);margin-bottom:.4rem">💼 LinkedIn</div>
+        <div style="font-size:.76rem;color:var(--muted)">Economic Graph Reports, role-wise demand, hiring trend analysis</div>
+      </div>
+      <div style="background:var(--s2);border-radius:8px;padding:1rem">
+        <div style="font-weight:700;font-size:.82rem;color:var(--emerald);margin-bottom:.4rem">💰 Glassdoor</div>
+        <div style="font-size:.76rem;color:var(--muted)">Salary reports, company insights, work mode compensation data</div>
+      </div>
+      <div style="background:var(--s2);border-radius:8px;padding:1rem">
+        <div style="font-weight:700;font-size:.82rem;color:var(--amber);margin-bottom:.4rem">🏛️ National Stats</div>
+        <div style="font-size:.76rem;color:var(--muted)">US BLS, UK ONS, India MoLE, ABS Australia — national labour statistics</div>
+      </div>
+    </div>
+  </div>
+
+</section>

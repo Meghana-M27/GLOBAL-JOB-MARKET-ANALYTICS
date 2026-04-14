@@ -1,0 +1,11 @@
+code,name,region,currency,gdp_per_capita,population
+US,United States,North America,USD,63543,330000000
+IN,India,Asia,INR,2277,1380000000
+GB,United Kingdom,Europe,GBP,46510,67000000
+CA,Canada,North America,CAD,52051,38000000
+DE,Germany,Europe,EUR,50801,83000000
+AU,Australia,Oceania,AUD,55060,26000000
+SG,Singapore,Asia,SGD,65233,5900000
+JP,Japan,Asia,JPY,39285,126000000
+NL,Netherlands,Europe,EUR,57768,17600000
+AE,United Arab Emirates,Middle East,AED,43103,10000000
